@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organization Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #000; /* Change to black */
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer; /* Add cursor pointer for better user experience */
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .about-us-card,
+    .quick-links-card {
+      width: 100%;
+      margin: 15px;
+      background-color: #fff; /* Change to white */
+      color: #000; /* Change text color to black */
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.2s ease-in-out;
+      text-decoration: none; /* Remove underline */
+      cursor: pointer; /* Add cursor pointer for better user experience */
+    }
+
+    .dashboard {
+      display: none; /* Initially hide the dashboard */
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .app {
+      width: calc(25% - 30px); /* 25% width with 30px margin on each side */
+      margin: 15px;
+      background-color: #fff; /* Change to white */
+      color: #000; /* Change text color to black */
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.2s ease-in-out;
+      text-decoration: none; /* Remove underline */
+    }
+
+    .app:hover {
+      transform: scale(1.05);
+    }
+
+    .app img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .app h3 {
+      margin: 0;
+      font-size: 16px;
+      text-decoration: none; /* Remove underline */
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="https://orderstack.io/" target="_blank">
+      <img src="https://raw.githubusercontent.com/jwala01/orderstack_org_dashboard/main/image%20repo/os_b.jpg"
+        alt="OrderStack Logo">
+    </a>
+  </header>
+
+  <div class="about-us-card" onclick="redirectAboutUs()">
+    <h3>About Us</h3>
+  </div>
+
+  <div class="quick-links-card" onclick="toggleDashboard()">
+    <h3>Quick Links</h3>
+  </div>
+
+  <div id="quickLinks" class="dashboard">
+    <!-- Teams -->
+    <a href="https://www.microsoft.com/en-in/microsoft-teams/log-in" class="app" target="_blank">
+      <img src="https://raw.githubusercontent.com/jwala01/orderstack_org_dashboard/main/image%20repo/teams.jpg"
+        alt="Microsoft Teams">
+      <h3>Microsoft Teams</h3>
+    </a>
+
+    <!-- Outlook -->
+    <a
+      href="https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook"
+      class="app" target="_blank">
+      <img src="https://raw.githubusercontent.com/jwala01/orderstack_org_dashboard/main/image%20repo/outlook.jpg"
+        alt="Microsoft Outlook">
+      <h3>Microsoft Outlook</h3>
+    </a>
+
+    <!-- Gmail -->
+    <a href="https://mail.google.com/" class="app" target="_blank">
+      <img src="https://raw.githubusercontent.com/jwala01/orderstack_org_dashboard/main/image%20repo/gmail.jpg"
+        alt="Gmail">
+      <h3>Gmail</h3>
+    </a>
+
+    <!-- Zoho Sprints -->
+    <a href="https://pmo.orderstack.io/" class="app" target="_blank">
+      <img src="https://raw.githubusercontent.com/jwala01/orderstack_org_dashboard/main/image%20repo/zoho.jpg"
+        alt="Zoho Sprints">
+      <h3>Zoho Sprints</h3>
+    </a>
+
+    <!-- Skype -->
+    <a href="https://www.skype.com/en/" class="app" target="_blank">
+      <img src="https://raw.githubusercontent.com/jwala01/orderstack_org_dashboard/main/image%20repo/skype.jpg"
+        alt="Skype">
+      <h3>Skype</h3>
+    </a>
+
+    <!-- Microsoft 365 -->
+    <a href="https://www.office.com/" class="app" target="_blank">
+      <img src="https://raw.githubusercontent.com/jwala01/orderstack_org_dashboard/main/image%20repo/ms365.jpg"
+        alt="Microsoft 365">
+      <h3>Microsoft 365</h3>
+    </a>
+
+    <!-- Share Point -->
+    <a href="https://tngoneorderstack-my.sharepoint.com/" class="app" target="_blank">
+      <img src="https://raw.githubusercontent.com/jwala01/orderstack_org_dashboard/main/image%20repo/sharepoint.jpg"
+        alt="Share Point">
+      <h3>Share Point</h3>
+    </a>
+
+    <!-- RazorPay Opfin -->
+    <a href="https://payroll.razorpay.com/login" class="app" target="_blank">
+      <img src="https://raw.githubusercontent.com/jwala01/orderstack_org_dashboard/main/image%20repo/opfin.jpg"
+        alt="RazorPay Opfin">
+      <h3>RazorPay Opfin</h3>
+    </a>
+
+    <!-- Opscape -->
+    <a href="https://opscape.orderstack.io/" class="app" target="_blank">
+      <img src="https://raw.githubusercontent.com/jwala01/orderstack_org_dashboard/main/image%20repo/opscape.jpg"
+        alt="Opscape">
+      <h3>Opscape</h3>
+    </a>
+  </div>
+
+  <script>
+    function toggleDashboard() {
+      var dashboard = document.getElementById("quickLinks");
+      if (dashboard.style.display === "none") {
+        dashboard.style.display = "flex";
+      } else {
+        dashboard.style.display = "none";
+      }
+    }
+
+    function redirectAboutUs() {
+      window.location.href = "https://orderstack.io/";
+    }
+  </script>
+
+</body>
+
+</html>
